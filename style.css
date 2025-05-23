@@ -1,40 +1,134 @@
-/* style.css */
+/* Reset + Base */
 body {
-  font-family: Poppins, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
+  color: #444;
 }
 
+/* Header */
+.header {
+  background-color: #ffb6c1;
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  border-bottom: 4px dashed #ff69b4;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+}
+
+/* Form Container */
 .form-container {
-  background: white;
+  background-color: #fff0f5;
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+  border: 2px dashed #ffc0cb;
+  text-align: center;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 2px solid #ffc0cb;
+  box-sizing: border-box;
+  font-size: 1em;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #ff69b4;
+  background-color: #fffafc;
+  outline: none;
+}
+
+.form-container textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.form-container button {
+  width: 48%;
+  padding: 12px;
+  margin: 10px 1%;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.form-container button:hover {
+  background-color: #ff85c1;
+}
+
+/* Messages */
+#form-message,
+#error-message {
+  color: #d6336c;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Complaints List */
+.complaints-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #fff0f5;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 10px #ccc;
-  width: 300px;
-  justify-content: center;
-  justify-items: center;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+  border: 2px dashed #ffc0cb;
 }
 
-input {
-  width: 92%;
-  padding: 8px;
-  margin: 8px 0;
+.complaints-container ul {
+  list-style: heart;
+  padding-left: 20px;
 }
 
-button {
-  width: 48%;
-  padding: 8px;
-  margin: 4px 1%;
-  border-radius: 10px;
-  border: 2px;
-  background-color: #000000;
-  color: white;
+.complaints-container li {
+  border-bottom: 1px dotted #ffb6c1;
+  padding: 10px 0;
+  font-style: italic;
 }
 
-#error-message {
-  color: red;
-  font-size: 14px;
+.complaints-container li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container,
+  .complaints-container {
+    width: 95%;
+  }
+
+  .form-container button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+.responses p {
+  background-color: #ffe6f0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #555;
 }
