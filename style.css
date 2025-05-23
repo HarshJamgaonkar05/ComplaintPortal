@@ -1,0 +1,40 @@
+/* style.css */
+body {
+  font-family: Poppins, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fafafa;
+}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ccc;
+  width: 300px;
+  justify-content: center;
+  justify-items: center;
+}
+
+input {
+  width: 92%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+button {
+  width: 48%;
+  padding: 8px;
+  margin: 4px 1%;
+  border-radius: 10px;
+  border: 2px;
+  background-color: #000000;
+  color: white;
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+}
